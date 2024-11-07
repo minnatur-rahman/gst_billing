@@ -30,7 +30,7 @@
 
       <form action="" method="post">
         <div class="input-group mb-3">
-            <input type="text" name="name" class="form-control" placeholder="User">
+            <input type="text" name="name" class="form-control" placeholder="Username">
             <div class="input-group-append">
               <div class="input-group-text">
                 <span class="fas fa-user"></span>
@@ -72,7 +72,7 @@
         <a href="forgot-password">I forgot my password</a>
       </p>
       <p class="mb-0">
-        <a href="{{ url('register') }}" class="text-center">Register a new membership</a>
+        <a href="{{ url('/') }}" class="text-center">Login</a>
       </p>
     </div>
     <!-- /.login-card-body -->
