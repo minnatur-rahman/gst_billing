@@ -18,9 +18,17 @@ class AuthController extends Controller
         return view('auth.register', $data);
     }
 
+    public function register_post(Request $request)
+    {
+        // dd($request->all());
+        
+    }
+
     public function forgot_password(Request $request)
     {
         $data['meta_title'] = 'Forgot Password';
         return view('auth.forgot_password', $data);
     }
+
+   
 }
