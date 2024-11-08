@@ -10,7 +10,8 @@
     <div class="card-body login-card-body">
       <p class="login-box-msg">Register</p>
 
-      <form action="" method="post">
+      <form action="{{ url('register_post') }}" method="post">
+        @csrf
         <div class="input-group mb-3">
             <input type="text" name="name" class="form-control" placeholder="Username">
             <div class="input-group-append">
