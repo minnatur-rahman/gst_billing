@@ -12,31 +12,33 @@
 
       <form action="{{ url('register_post') }}" method="post">
         @csrf
+        <span style="color: red">{{ $errors->first('name') }}</span>
         <div class="input-group mb-3">
-            <input type="text" name="name" class="form-control" placeholder="Username">
+            <input type="text" name="name" required value="{{ old('name') }}" class="form-control" placeholder="Username">
             <div class="input-group-append">
               <div class="input-group-text">
                 <span class="fas fa-user"></span>
               </div>
             </div>
           </div>
+
+          <span style="color: red">{{ $errors->first('email') }}</span>
         <div class="input-group mb-3">
-          <input type="email" name="email" class="form-control" placeholder="Email">
+          <input type="email" name="email" required value="{{ old('email') }}" class="form-control" placeholder="Email">
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-envelope"></span>
             </div>
           </div>
-          <span style="color: red">{{ $errors->first('email') }}</span>
         </div>
+       
         <div class="input-group mb-3">
-          <input type="password" name="password" class="form-control" placeholder="Password">
+          <input type="password" name="password"  required value="{{ old('name') }}" class="form-control" placeholder="Password">
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-lock"></span>
             </div>
           </div>
-          <span style="color: red">{{ $errors->first('password') }}</span>
         </div>
         <div class="row">
           <div class="col-8">
