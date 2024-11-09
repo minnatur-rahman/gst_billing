@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
-use Dotenv\Validator;
+use Validated;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
@@ -25,15 +25,11 @@ class AuthController extends Controller
     public function register_post(Request $request)
     {
         // dd($request->all());
-        $user = Validator::make($request->all(),[  
-            'name' => 'required|min:3',
-            'email' => 'required|email|unique:users',
-            'password' => 'required|confirmed|min:6',
-            
-        ]);
-        if ($user->fails()){
-            return redirect()->route('auth.register')->withInput()->withErrors($user);
-        }
+       $user = request()->validate([
+        'name' => 'required|min:3',
+        'email' => 'required|unique:users',
+        'password' => 'required|min:6',
+       ]);
 
            //This method will register a user
            $user = New User();
