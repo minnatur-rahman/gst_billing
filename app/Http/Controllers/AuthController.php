@@ -16,6 +16,11 @@ class AuthController extends Controller
         return view('auth.login',  $data);
     }
 
+    public function login_post(Request $request)
+    {
+        dd($request->all());
+    }
+
     public function register(Request $request)
     {
         $data['meta_title'] = 'Register';
