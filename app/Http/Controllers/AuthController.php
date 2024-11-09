@@ -6,6 +6,7 @@ use App\Models\User;
 use Dotenv\Validator;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Str;
 
 class AuthController extends Controller
 {
@@ -39,9 +40,10 @@ class AuthController extends Controller
            $user->name = $request->name;
            $user->email = $request->email;
            $user->password = Hash::make($request->password);
+           $user->remember_token = Str::random(50);
            $user->save();
 
-           return redirect('/');
+           return redirect('/')->with('success', 'Register Successfully Done.');
     }
 
     public function forgot_password(Request $request)

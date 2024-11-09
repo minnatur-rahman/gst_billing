@@ -27,6 +27,7 @@
               <span class="fas fa-envelope"></span>
             </div>
           </div>
+          <span style="color: red">{{ $errors->first('email') }}</span>
         </div>
         <div class="input-group mb-3">
           <input type="password" name="password" class="form-control" placeholder="Password">
@@ -35,6 +36,7 @@
               <span class="fas fa-lock"></span>
             </div>
           </div>
+          <span style="color: red">{{ $errors->first('password') }}</span>
         </div>
         <div class="row">
           <div class="col-8">
