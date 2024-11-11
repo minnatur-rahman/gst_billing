@@ -41,13 +41,7 @@
         <a class="nav-link" data-toggle="dropdown" href="#">
           <i class="far fa-logout"></i>
           <span class="badge badge-warning navbar-badge">15</span>
-        </a>
-       
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#">
-          <i class="fas fa-th-large"></i>
-        </a>
+        </a>      
       </li>
     </ul>
   </nav>
