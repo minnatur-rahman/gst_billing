@@ -62,10 +62,10 @@
           </li>
          
           <li class="nav-item">
-            <a href="pages/gallery.html" class="nav-link">
-              <i class="nav-icon far fa-image"></i>
+            <a href="{{ url('admin/parties_type') }}" class="nav-link">
+              <i class="nav-icon far fa-user"></i>
               <p>
-                Gallery
+                Parties Type
               </p>
             </a>
           </li>
