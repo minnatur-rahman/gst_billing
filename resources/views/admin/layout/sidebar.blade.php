@@ -51,7 +51,7 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item has-treeview menu-open">
-            <a href="{{ url('admin/dashboard') }}" class="nav-link active">
+            <a href="{{ url('admin/dashboard') }}" class="nav-link @if(Request::segment(2) == 'dashboard') active @endif">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                 Dashboard
@@ -62,7 +62,7 @@
           </li>
          
           <li class="nav-item">
-            <a href="{{ url('admin/parties_type') }}" class="nav-link">
+            <a href="{{ url('admin/parties_type') }}" class="nav-link @if(Request::segment(2) == 'parties_type') active @endif">
               <i class="nav-icon far fa-user"></i>
               <p>
                 Parties Type
