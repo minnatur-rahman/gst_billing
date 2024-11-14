@@ -41,7 +41,8 @@
                       <td>1.</td>
                       <td>Update Software</td>
                       <td>
-                        Edit and Delete
+                        <a href="" class="btn btn-info"><i class="fas fa-pencil-alt"></i></a>
+                        <a href="" class="btn btn-info><i class="fas fa-trash"></i></a>
                       </td>
                     </tr>
                   </tbody>
