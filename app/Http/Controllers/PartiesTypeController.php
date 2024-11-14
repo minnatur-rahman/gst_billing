@@ -10,4 +10,9 @@ class PartiesTypeController extends Controller
     {
       return view('admin.parties_type.list');
     }
+
+    public function parties_type_add()
+    {
+      return view('admin.parties_type.add');
+    }
 }
