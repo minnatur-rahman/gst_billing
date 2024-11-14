@@ -31,9 +31,9 @@
                   <thead>                  
                     <tr>
                       <th style="width: 10px">#</th>
-                      <th>Parties Type Name</th>
+                      <th style="width: 40px">Parties Type Name</th>
                       <th style="width: 40px">Action</th>
-                    </tr>
+                    </tr> 
                   </thead>
                   <tbody>
                     <tr>
