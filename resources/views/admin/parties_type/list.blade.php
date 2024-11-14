@@ -24,6 +24,7 @@
             <div class="card">
               <div class="card-header">
                 <h3 class="card-title">Parties type list</h3>
+                <a href="" class="btn btn-success float-right">Add New Parties</a>
               </div>
               <!-- /.card-header -->
               <div class="card-body">
