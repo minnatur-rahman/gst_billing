@@ -15,6 +15,7 @@ Route::get('forgot-password', [AuthController::class, 'forgot_password']);
 Route::group(['middleware' => 'admin'], function(){
     Route::get('admin/dashboard', [DashboardController::class, 'dashboard']);
     Route::get('admin/parties_type', [PartiesTypeController::class, 'parties_type']);
+    Route::get('admin/parties_type/add', [PartiesTypeController::class, 'parties_type_add']);
 });
 
 Route::get('logout', [AuthController::class, 'logout']);
