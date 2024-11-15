@@ -24,12 +24,13 @@
             </div>
             <!-- /.card-header -->
             <!-- form start -->
-            <form class="form-horizontal">
+            <form class="form-horizontal" action="{{ url('admin/parties_type/add') }}" method="POST">
+              @csrf
               <div class="card-body">
                 <div class="form-group row">
-                  <label for="inputEmail3" class="col-sm-2 col-form-label">Parties Type Name</label>
+                  <label for="inputEmail3" class="col-sm-2 col-form-label">Parties Type Name <span style="color: red">*</span></label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" placeholder="Parties Type Name">
+                    <input type="text" class="form-control" required placeholder="Parties Type Name">
                   </div>
                 </div>
               </div>
