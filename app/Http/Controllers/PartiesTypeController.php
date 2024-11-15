@@ -21,11 +21,11 @@ class PartiesTypeController extends Controller
     {
       // dd($request->all());
       $save = request()->validate([
-          'parties_type_name' => 'required'
+          'parties_type_name' => 'required',
       ]);
 
       $save = new PartiesTypeModel();
-      $save->parties_type_name = trim($request->parties_type);
+      $save->parties_type_name = $request->parties_types;
       $save->save();
 
       return redirect('admin/parties_type')->with('success', 'Record successfully create.');

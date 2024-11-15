@@ -24,7 +24,7 @@
             </div>
             <!-- /.card-header -->
             <!-- form start -->
-            <form class="form-horizontal" action="{{ url('admin/parties_type/add') }}" method="POST">
+            <form class="form-horizontal" action="{{ url('admin/parties_type/insert') }}" method="POST">
               @csrf
               <div class="card-body">
                 <div class="form-group row">
