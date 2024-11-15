@@ -20,8 +20,12 @@ class PartiesTypeController extends Controller
     public function parties_type_insert(Request $request)
     {
       // dd($request->all());
+      $save = request()->validate([
+          'parties_type_name' => 'required|unique:parties_type,parties_type_name'
+      ]);
+
       $save = new PartiesTypeModel();
-      $save->parties_type_name = trim($request->parties_type_name);
+      $save->parties_type_name = trim($request->parties_type);
       $save->save();
 
       return redirect('admin/parties_type')->with('success', 'Record successfully create.');
