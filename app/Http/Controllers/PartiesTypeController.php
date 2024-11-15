@@ -21,7 +21,7 @@ class PartiesTypeController extends Controller
     {
       // dd($request->all());
       $save = request()->validate([
-          'parties_type_name' => 'required|unique:parties_type,parties_type_name'
+          'parties_type_name' => 'required'
       ]);
 
       $save = new PartiesTypeModel();
