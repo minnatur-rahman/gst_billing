@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\PartiesTypeModel;
 use Illuminate\Http\Request;
 
 class PartiesTypeController extends Controller
@@ -18,6 +19,11 @@ class PartiesTypeController extends Controller
 
     public function parties_type_insert(Request $request)
     {
-      dd($request->all());
+      // dd($request->all());
+      $save = new PartiesTypeModel();
+      $save->parties_type_name = trim($request->parties_type_name);
+      $save->save();
+
+      return redirect('admin/parties_type')->with('success', 'Record successfully create.');
     }
 }
