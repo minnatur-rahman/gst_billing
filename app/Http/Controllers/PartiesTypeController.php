@@ -16,8 +16,8 @@ class PartiesTypeController extends Controller
       return view('admin.parties_type.add');
     }
 
-    public function parties_type_insert()
+    public function parties_type_insert(Request $request)
     {
-      
+      dd($request->all());
     }
 }
