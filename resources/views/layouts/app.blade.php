@@ -26,6 +26,31 @@
 
     @yield('content')
 
+
+      <!-- jQuery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <!-- Toastr JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+ 
+ <script>
+     // Toastr options
+     toastr.options = {
+         "closeButton": true,
+         "progressBar": true,
+         "positionClass": "toast-top-right",
+         "timeOut": "5000"
+     };
+ 
+     // Display toastr messages if session has 'success' or 'error' messages
+     @if(Session::has('success'))
+         toastr.success("{{ Session::get('success') }}");
+     @endif
+ 
+     @if(Session::has('error'))
+         toastr.error("{{ Session::get('error') }}");
+     @endif
+ </script>
+
  <!-- jQuery -->
 <script src="../../plugins/jquery/jquery.min.js"></script>
 <!-- Bootstrap 4 -->
