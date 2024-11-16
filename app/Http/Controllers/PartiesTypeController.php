@@ -25,7 +25,7 @@ class PartiesTypeController extends Controller
       ]);
 
       $save = new PartiesTypeModel();
-      $save->parties_type_name = $request->parties_types;
+      $save->parties_type_name = trim($request->parties_type_name);
       $save->save();
 
       return redirect('admin/parties_type')->with('success', 'Record successfully create.');
